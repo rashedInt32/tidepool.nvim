@@ -12,19 +12,11 @@ pine constants. Bold is reserved for definitions.
 <table>
   <tr>
     <th>TSX / React</th>
-    <th>Go</th>
+    <th>Rust</th>
   </tr>
   <tr>
     <td><img src="assets/screenshots/tsx.png" alt="TSX / React" /></td>
-    <td><img src="assets/screenshots/go.png" alt="Go" /></td>
-  </tr>
-  <tr>
-    <th>Rust</th>
-    <th>HTML</th>
-  </tr>
-  <tr>
     <td><img src="assets/screenshots/rust.png" alt="Rust" /></td>
-    <td><img src="assets/screenshots/html.png" alt="HTML" /></td>
   </tr>
 </table>
 
