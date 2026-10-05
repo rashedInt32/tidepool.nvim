@@ -467,6 +467,8 @@ function M.get(p, cfg)
     -- Effect.gen opens a program scope. Warm rose-pink advances
     -- against the cool base, so the marker leaps off the page.
     EffectGen = { fg = p.effect_gen, bold = bold },
+    -- Applied by queries/{typescript,tsx}/highlights.scm.
+    ["@effect.gen"] = { link = "EffectGen" },
   }
 
   return groups
