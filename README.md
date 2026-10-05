@@ -5,6 +5,29 @@ restraint. Scaffolding (keywords, operators, punctuation) recedes into quiet
 slate. Verbs and data lead: lavender functions, gold types, sage strings,
 pine constants. Bold is reserved for definitions.
 
+## Screenshots
+
+![TypeScript](assets/screenshots/typescript.png)
+
+<table>
+  <tr>
+    <th>TSX / React</th>
+    <th>Go</th>
+  </tr>
+  <tr>
+    <td><img src="assets/screenshots/tsx.png" alt="TSX / React" /></td>
+    <td><img src="assets/screenshots/go.png" alt="Go" /></td>
+  </tr>
+  <tr>
+    <th>Rust</th>
+    <th>HTML</th>
+  </tr>
+  <tr>
+    <td><img src="assets/screenshots/rust.png" alt="Rust" /></td>
+    <td><img src="assets/screenshots/html.png" alt="HTML" /></td>
+  </tr>
+</table>
+
 ## Design principles
 
 - Dark but never pure black base (`#011627`): softer on halation and astigmatism.
@@ -49,4 +72,21 @@ require("tidepool").setup({
 Editor UI, legacy syntax, full treesitter captures, LSP semantic tokens
 (static links, no autocmd), diagnostics, diff/git, terminal palette, and:
 blink.cmp, telescope, snacks, gitsigns, flash, which-key, noice, lazy,
-mason, indent-blankline, trouble, oil, render-markdown.
+mason, indent-blankline, trouble, oil, render-markdown, todo-comments.
+
+TypeScript and TSX ship an extra query that paints `Effect.gen(...)` calls
+with the warm `EffectGen` accent. TODO/FIXME badges in comments need the
+`comment` treesitter parser (`:TSInstall comment`).
+
+## Examples
+
+The [`examples/`](examples/) folder has demo files in 18 languages for
+previewing the theme. Open any of them after loading the colorscheme:
+
+```sh
+nvim -c 'colorscheme tidepool' examples/typescript.ts
+```
+
+## License
+
+MIT. See [LICENSE](LICENSE).
