@@ -1,0 +1,54 @@
+/* Tidepool demo: CSS */
+/* TODO: add a light-mode palette */
+@import url("https://fonts.example.com/inter.css");
+
+:root {
+  --bg: #011627;
+  --fg: #d6deeb;
+  --accent: hsl(260 40% 75%);
+  --radius: 0.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 400 1rem/1.6 "Inter", system-ui, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+}
+
+.site-header > nav a:not(.active):hover {
+  color: var(--accent);
+  text-decoration: underline 2px;
+}
+
+#app table {
+  width: min(100%, 48rem);
+  border-collapse: collapse;
+  transition: opacity 150ms ease-in-out;
+}
+
+tr:nth-child(2n + 1) td {
+  background-color: rgb(255 255 255 / 0.04);
+}
+
+button[disabled] {
+  opacity: 0.5 !important;
+  cursor: not-allowed;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none;
+  }
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}

@@ -1,0 +1,28 @@
+# Tidepool demo: TOML
+title = "Tidepool stations"
+version = "1.2.0"
+enabled = true
+updated = 2026-10-04T08:30:00Z
+
+[defaults]
+units = "m"
+refresh_seconds = 30
+thresholds = { low = -2.0, high = 4.2 }
+
+[[station]]
+id = "north"
+name = "North Cove"
+depth = 12.5
+tags = ["cove", "sheltered"]
+
+[[station]]
+id = "south"
+name = 'South Reef'
+depth = 8_000e-3
+tags = []
+
+[logging]
+level = "info"   # TODO: make configurable via env
+path = """
+/var/log/tidepool/
+"""

@@ -1,0 +1,16 @@
+{
+  "name": "tidepool-demo",
+  "version": "1.0.0",
+  "private": true,
+  "stations": [
+    { "id": "north", "height": 1.5, "rising": true, "tags": ["cove", "sheltered"] },
+    { "id": "south", "height": -0.75, "rising": false, "tags": [] },
+    { "id": "east", "height": null, "rising": false }
+  ],
+  "config": {
+    "refreshSeconds": 30,
+    "units": "m",
+    "thresholds": { "low": -2.0, "high": 4.2 },
+    "url": "https://api.example.com/v1/tides?station=north"
+  }
+}

@@ -1,0 +1,36 @@
+# Tidepool demo: YAML
+name: tide-check
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 */6 * * *"
+
+env:
+  MAX_HEIGHT: 4.2
+  VERBOSE: true
+  REGION: ~
+
+defaults: &defaults
+  runs-on: ubuntu-latest
+  timeout-minutes: 10
+
+jobs:
+  check:
+    <<: *defaults
+    strategy:
+      matrix:
+        station: [north, south, east]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read ${{ matrix.station }}
+        run: |
+          echo "station=${{ matrix.station }}"
+          ./examples/shell.sh --json
+      - name: Upload # TODO: pin version
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: logs-${{ matrix.station }}
+          path: logs/
+          retention-days: 7

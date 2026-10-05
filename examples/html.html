@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tidepool Demo</title>
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  <body>
+    <!-- TODO: add a dark/light toggle -->
+    <header class="site-header">
+      <h1>Tide <em>Stations</em></h1>
+      <nav aria-label="Primary">
+        <a href="#north">North</a>
+        <a href="#south" class="active">South</a>
+      </nav>
+    </header>
+
+    <main id="app" data-refresh="30">
+      <table>
+        <thead>
+          <tr><th scope="col">Station</th><th scope="col">Height</th></tr>
+        </thead>
+        <tbody>
+          <tr id="north"><td>North Cove</td><td>1.50&nbsp;m</td></tr>
+          <tr id="south"><td>South Reef</td><td>&minus;0.75&nbsp;m</td></tr>
+        </tbody>
+      </table>
+      <button type="button" disabled>Refresh</button>
+    </main>
+
+    <script type="module">
+      const app = document.querySelector("#app");
+      const seconds = Number(app.dataset.refresh);
+      setInterval(() => console.log(`refresh after ${seconds}s`), seconds * 1000);
+    </script>
+  </body>
+</html>
