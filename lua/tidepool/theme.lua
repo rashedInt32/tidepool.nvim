@@ -429,6 +429,30 @@ function M.get(p, cfg)
     OilDir = { fg = p.mint },
     OilFile = { fg = p.text },
 
+    -- todo-comments: same badge colors as the treesitter @comment.* groups.
+    -- The plugin defines its groups with `default`, so these win.
+    TodoBgFIX = { fg = p.base, bg = p.love, bold = bold },
+    TodoFgFIX = { fg = p.love },
+    TodoSignFIX = { fg = p.love },
+    TodoBgTODO = { fg = p.base, bg = p.foam, bold = bold },
+    TodoFgTODO = { fg = p.foam },
+    TodoSignTODO = { fg = p.foam },
+    TodoBgHACK = { fg = p.base, bg = p.gold, bold = bold },
+    TodoFgHACK = { fg = p.gold },
+    TodoSignHACK = { fg = p.gold },
+    TodoBgWARN = { fg = p.base, bg = p.gold, bold = bold },
+    TodoFgWARN = { fg = p.gold },
+    TodoSignWARN = { fg = p.gold },
+    TodoBgPERF = { fg = p.base, bg = p.iris, bold = bold },
+    TodoFgPERF = { fg = p.iris },
+    TodoSignPERF = { fg = p.iris },
+    TodoBgNOTE = { fg = p.base, bg = p.foam, bold = bold },
+    TodoFgNOTE = { fg = p.foam },
+    TodoSignNOTE = { fg = p.foam },
+    TodoBgTEST = { fg = p.base, bg = p.pine, bold = bold },
+    TodoFgTEST = { fg = p.pine },
+    TodoSignTEST = { fg = p.pine },
+
     -- render-markdown code blocks
     RenderMarkdownCode = { bg = p.cursorline },
     RenderMarkdownCodeInline = { fg = p.pine, bg = p.cursorline },
