@@ -151,7 +151,15 @@ function M.get(p, cfg)
     ["@keyword.exception"] = { fg = p.keyword },
     ["@keyword.directive"] = { fg = p.pine },
     ["@keyword.debug"] = { fg = p.love },
+    -- SQL reads as a sequence of clauses, so every keyword shares one weight.
+    -- The sql query splits keywords across sub-captures (CASE, NOT, ON, BY,
+    -- ASC, DEFAULT...), which would otherwise fall back to plain slate.
     ["@keyword.sql"] = { fg = p.sql, bold = bold },
+    ["@keyword.conditional.sql"] = { fg = p.sql, bold = bold },
+    ["@keyword.operator.sql"] = { fg = p.sql, bold = bold },
+    ["@keyword.modifier.sql"] = { fg = p.sql, bold = bold },
+    ["@keyword.repeat.sql"] = { fg = p.sql, bold = bold },
+    ["@attribute.sql"] = { fg = p.sql, bold = bold },
 
     ["@operator"] = { fg = p.operator },
     ["@punctuation.bracket"] = { fg = p.punctuation },
