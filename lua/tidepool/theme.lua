@@ -425,15 +425,9 @@ function M.get(p, cfg)
     RenderMarkdownCode = { bg = p.cursorline },
     RenderMarkdownCodeInline = { fg = p.pine, bg = p.cursorline },
 
-    -- rainbow-delimiters: muted cool cycle. Brackets are scaffolding;
-    -- stock red/yellow outshouted every semantic token, and red means error.
-    RainbowDelimiterRed = { fg = p.punctuation },
-    RainbowDelimiterYellow = { fg = p.gold_soft },
-    RainbowDelimiterBlue = { fg = "#5f89ad" },
-    RainbowDelimiterOrange = { fg = p.module },
-    RainbowDelimiterGreen = { fg = "#5e9488" },
-    RainbowDelimiterViolet = { fg = "#9a8fc0" },
-    RainbowDelimiterCyan = { fg = "#4f93b3" },
+    -- No RainbowDelimiter* groups on purpose: the owner prefers the plugin's
+    -- own built-in colors, which it defines with `default = true` and only
+    -- applies when the theme leaves these groups undefined.
 
     ----------------------------------------------------------------
     -- CUSTOM
