@@ -95,6 +95,9 @@ local hybrid = vim.tbl_extend("force", {}, lifted, {
   keyword = muted.keyword,
   operator = muted.operator,
   punctuation = muted.punctuation,
+  -- Pine colors every readonly const and Effect API call, so it is one of the
+  -- most frequent hues; the lifted shade made it pop.
+  pine = "#66a394",
 })
 
 local variants = { muted = muted, lifted = lifted, hybrid = hybrid }

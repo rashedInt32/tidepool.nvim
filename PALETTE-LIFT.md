@@ -36,3 +36,7 @@ beats lifting or muting everything uniformly.
 
 Untouched in both: backgrounds (base/surface/overlay/cursorline/visual/border),
 diff tints, muted line numbers `#48708c`, mint `#7aa2f7`.
+
+`hybrid` also overrides pine to `#66a394` (6.31:1), darker than both rows.
+Pine colors every readonly const and Effect API call, so the lifted shade
+popped too much (2026-10-01).
